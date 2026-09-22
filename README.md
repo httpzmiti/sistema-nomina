@@ -206,6 +206,25 @@ abrir un *Pull Request* hacia `main`.
 
 ---
 
+## 🤖 Metodología de desarrollo
+
+Este proyecto se desarrolló mediante **vibecoding**: programación asistida por
+IA (Claude Code) donde el desarrollador dirige, revisa y valida cada cambio
+en lugar de escribir cada línea manualmente. El diseño orientado a objetos
+(qué clases existen, por qué `Empleado` es abstracta, por qué el bono va en
+una interfaz separada y no en la clase padre, qué validaciones debía tener
+cada setter) partió de conocimiento propio de POO y Java por parte del
+estudiante; la IA se usó para acelerar la implementación, la interfaz
+gráfica, el empaquetado del `.jar` y la resolución de errores puntuales
+(versión de bytecode, Look&Feel de Swing, configuración de Git/GitHub).
+
+Dicho de forma realista: es un proyecto académico funcional y correcto en
+sus fundamentos de POO, construido con ayuda de IA como herramienta de
+productividad, no como sustituto del entendimiento del estudiante sobre lo
+que el código hace y por qué.
+
+---
+
 ## 👤 Autor
 
 **Luis Rainiel Pérez de los Santos** — Estudiante de Ingeniería de Software, ITLA.
