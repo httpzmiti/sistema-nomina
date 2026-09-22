@@ -1,0 +1,46 @@
+# ─────────────────────────────────────────────
+#  Artefactos de compilación (Maven / Java)
+# ─────────────────────────────────────────────
+target/
+*.class
+*.jar
+*.war
+
+# ─────────────────────────────────────────────
+#  Archivos de entornos de desarrollo (IDE)
+# ─────────────────────────────────────────────
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+
+# Eclipse
+.classpath
+.project
+.settings/
+bin/
+
+# VS Code
+.vscode/
+
+# NetBeans
+nbproject/
+build/
+
+# ─────────────────────────────────────────────
+#  Sistema operativo
+# ─────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ─────────────────────────────────────────────
+#  Variables de entorno y secretos
+# ─────────────────────────────────────────────
+.env
+*.local
+
+# ─────────────────────────────────────────────
+#  Vault de Obsidian (documentación personal, NO va al repo de código)
+# ─────────────────────────────────────────────
+.obsidian/
+vault/

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- Coordenadas del proyecto: identifican de forma única el artefacto -->
+    <groupId>com.itla</groupId>
+    <artifactId>sistema-nomina</artifactId>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
+
+    <name>Sistema de Gestion de Nomina</name>
+    <description>
+        Proyecto academico (ITLA) que demuestra los 4 pilares de la
+        Programacion Orientada a Objetos en Java 21:
+        Abstraccion, Encapsulamiento, Herencia y Polimorfismo.
+    </description>
+
+    <properties>
+        <!-- Fijamos Java 21 para el compilador y el codigo fuente -->
+        <maven.compiler.release>21</maven.compiler.release>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- Clase principal usada por el plugin exec (mvn exec:java -> menu de consola) -->
+        <exec.mainClass>com.itla.nomina.Main</exec.mainClass>
+        <!-- Clase principal empacada en el .jar ejecutable (doble clic -> interfaz grafica) -->
+        <jar.mainClass>com.itla.nomina.gui.NominaGUI</jar.mainClass>
+    </properties>
+
+    <build>
+        <plugins>
+            <!-- Compilador -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.13.0</version>
+            </plugin>
+
+            <!-- Permite ejecutar con: mvn exec:java -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.2.0</version>
+                <configuration>
+                    <mainClass>${exec.mainClass}</mainClass>
+                </configuration>
+            </plugin>
+
+            <!-- Empaqueta un .jar ejecutable (doble clic) con "mvn package".
+                 El manifest apunta a la GUI para que abra la ventana directamente. -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.4.1</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>${jar.mainClass}</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
